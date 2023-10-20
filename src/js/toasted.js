@@ -118,8 +118,11 @@ export const Toasted = function (_options) {
 
 		// merge the cached global options with options
 		Object.assign(_options, options);
-
-		let toast = new Toast(this);
+		
+		// Handler that fires when the container has been mounted to the DOM.
+		const onMounted = this.options.onMounted || (() => {})
+		
+		let toast = new Toast(this, onMounted);
 		return toast.create(message, _options);
 	}
 

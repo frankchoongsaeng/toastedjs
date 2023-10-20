@@ -3,7 +3,7 @@ import {Extender} from './toasted';
 import animations from './animations'
 const uuid = require('shortid');
 
-export const Toast = function (instance) {
+export const Toast = function (instance, onMounted) {
 
 	/**
 	 * Compiled options of the toast
@@ -134,6 +134,7 @@ export const Toast = function (instance) {
 			container = document.createElement('div');
 			container.id = instance.id;
 			document.body.appendChild(container);
+			onMounted(container)
 		}
 
 		// check if the container classes has changed if so update it

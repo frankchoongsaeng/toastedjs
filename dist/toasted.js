@@ -317,7 +317,10 @@ var Toasted = exports.Toasted = function Toasted(_options) {
 		// merge the cached global options with options
 		Object.assign(_options, options);
 
-		var toast = new _toast2.default(_this);
+		// Handler that fires when the container has been mounted to the DOM.
+		var onMounted = _this.options.onMounted || function () {};
+
+		var toast = new _toast2.default(_this, onMounted);
 		return toast.create(message, _options);
 	};
 
@@ -645,7 +648,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var uuid = __webpack_require__(3);
 
-var Toast = exports.Toast = function Toast(instance) {
+var Toast = exports.Toast = function Toast(instance, onMounted) {
 	var _this = this;
 
 	/**
@@ -766,6 +769,7 @@ var Toast = exports.Toast = function Toast(instance) {
 			container = document.createElement('div');
 			container.id = instance.id;
 			document.body.appendChild(container);
+			onMounted(container);
 		}
 
 		// check if the container classes has changed if so update it
