@@ -125,6 +125,7 @@ let toasted = new Toasted({
 **type**|String|'default'|Type of the Toast <br> **['success', 'info', 'error']**
 **theme**|String|'primary'|Theme of the toast you prefer <br> **['primary', 'outline', 'bubble']**
 **onComplete**|Function|null|Trigger when toast is completed
+**onMounted**|Function|() => {}|Triggered when toast container is added to the dom
 
 
 #### Actions
