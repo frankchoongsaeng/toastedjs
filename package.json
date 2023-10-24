@@ -1,7 +1,7 @@
 {
   "name": "@frankchoongsaeng/toastedjs",
   "description": "Javascript Toast Plugin - Easy, Responsive and Touch Compatible",
-  "version": "0.0.4",
+  "version": "0.0.7-canary-1",
   "author": "Shakeeb Sadikeen <shakee.zats@gmail.com>",
   "contributors": [
     "Frank Choongsaeng <frankchoongsaeng@gmail.com>"
