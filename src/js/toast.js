@@ -1,7 +1,7 @@
 import Hammer from 'hammerjs';
 import {Extender} from './toasted';
 import animations from './animations'
-const uuid = require('shortid');
+import uuid from 'shortid';
 
 export const Toast = function (instance, onMounted) {
 

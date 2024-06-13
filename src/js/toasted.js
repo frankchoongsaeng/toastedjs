@@ -1,5 +1,5 @@
 import Toast from './toast';
-const uuid = require('shortid');
+import uuid from 'shortid';
 import animations from './animations';
 
 // add Object.assign Polyfill
